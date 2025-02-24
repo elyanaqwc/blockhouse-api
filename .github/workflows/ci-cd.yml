@@ -72,7 +72,7 @@ jobs:
       - name: SSH into EC2 and deploy
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@18.119.104.99 << 'EOF'
-            cd /path/to/your/app || exit
+            cd /home/ubuntu/blockhouse || exit
             docker-compose down || exit
             docker-compose pull || exit
             docker-compose up -d || exit
