@@ -29,7 +29,7 @@ pip install -r requirements.txt
 ### 3. Set Up Environment Variables
 Create a `.env` file in the project root and configure the necessary environment variables:
 ```env
-DATABASE_URL=postgresql://user:password@localhost:5432/blockhouse_db
+DATABASE_URL=postgresql://user:password@db:5432/orders_db
 POSTGRES_USER=postgres_user
 POSTGRES_PASSWORD=postgres_password
 POSTGRES_DB=postgres_db
@@ -42,12 +42,7 @@ PGADMIN_DEFAULT_PASSWORD=pgadmin_default_password
 ```sh
 docker-compose up -d --build
 ```
-
-## 5. Run the Application
-```sh
-uvicorn server:app --reload
-```
-
+The API is now accessible at http://localhost:8000.
 ---
 
 ## API Documentation
