@@ -17,7 +17,7 @@ git clone https://github.com/elyanaqwc/blockhouse-api.git
 ### 2. Install Dependencies
 Create a virtual environment and install dependencies:
 ```sh
-python -m venv venv
+python -m venv .venv
 source .venv/bin/activate  # On Windows Powershell use `.venv\Scripts\Activate.ps1`
 ```
 Then, install the required dependencies:
@@ -42,7 +42,9 @@ PGADMIN_DEFAULT_PASSWORD=pgadmin_default_password
 ```sh
 docker-compose up -d --build
 ```
-The API is now accessible at http://localhost:8000.
+
+ The API is now accessible at http://localhost:8000
+
 ---
 
 ## API Documentation
