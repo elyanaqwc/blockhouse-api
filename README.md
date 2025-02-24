@@ -45,7 +45,7 @@ docker-compose up -d --build
 
 ## 5. Run the Application
 ```sh
-uvicorn server:app --host 0.0.0.0 --port 8000 --reload
+uvicorn server:app --reload
 ```
 
 ---
@@ -54,8 +54,8 @@ uvicorn server:app --host 0.0.0.0 --port 8000 --reload
 
 You can retrieve the API schema in JSON format via /api.json, or locally via the endpoints listed below. 
 
-1. Swagger UI: http://localhost:8000/docs
-2. ReDoc: http://localhost:8000/redoc
+- Swagger UI: http://localhost:8000/docs
+- ReDoc: http://localhost:8000/redoc
 
 ## API Endpoints
 
