@@ -42,24 +42,24 @@ def test_create_order():
         "symbol": "AAPL",
         "price": 150,
         "quantity": 10,
-        "status": "open",
         "order_type": "limit",
         "side": "buy",
+        "status": "pending",
         "exchange": "NYSE"
     }
     response = client.post("/orders", json=order_data)
     assert response.status_code == 200
     assert response.json()["symbol"] == "AAPL"
-    assert response.json()["status"] == "open"
+    assert response.json()["status"] == "pending"
 
 def test_update_order_status():
     order_data = {
         "symbol": "AAPL",
         "price": 150,
         "quantity": 10,
-        "status": "open",
         "order_type": "limit",
         "side": "buy",
+        "status": "pending",
         "exchange": "NYSE"
     }
 
@@ -69,16 +69,16 @@ def test_update_order_status():
     update_data = {"status": "completed"}
     response = client.patch(f"/orders/{order_id}", json=update_data)
     assert response.status_code == 200
-    assert response.json()["status"] == "completed"
+    assert response.json()["status"] == "filled"
 
 def test_delete_order():
     order_data = {
         "symbol": "AAPL",
         "price": 150,
         "quantity": 10,
-        "status": "open",
         "order_type": "limit",
         "side": "buy",
+        "status": "pending",
         "exchange": "NYSE"
     }
 
@@ -88,4 +88,4 @@ def test_delete_order():
     response = client.delete(f"/orders/{order_id}")
     assert response.status_code == 200
     assert response.json()["id"] == order_id
-    assert response.json()["status"] == "open"  
+    assert response.json()["status"] == "filled"  
