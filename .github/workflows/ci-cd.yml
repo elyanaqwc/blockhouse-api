@@ -22,6 +22,7 @@ jobs:
           python-version: '3.9'
           
       - name: Install dependencies
+        working-directory: ./backend
         run: |
           pip install -r requirements.txt
           
