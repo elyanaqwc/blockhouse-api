@@ -31,10 +31,10 @@ Create a `.env` file in the project root and configure the necessary environment
 ```env
 DATABASE_URL=postgresql://user:password@db:5432/orders_db
 POSTGRES_USER=postgres_user
-POSTGRES_PASSWORD=postgres_password
-POSTGRES_DB=postgres_db
-PGADMIN_DEFAULT_EMAIL=pgadmin_default_email
-PGADMIN_DEFAULT_PASSWORD=pgadmin_default_password
+POSTGRES_PASSWORD=your_postgres_password
+POSTGRES_DB=orders_db
+PGADMIN_DEFAULT_EMAIL=your_pgadmin_default_email
+PGADMIN_DEFAULT_PASSWORD=your_pgadmin_default_password
 ```
 
 ## 4. Docker Setup
